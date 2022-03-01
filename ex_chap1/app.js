@@ -67,11 +67,9 @@ for (let i = 0; i < listTodo.length; i++) {
             location.reload();
         }
     };
-
     let $row = document.createElement('tr');
     $row.append($colCheckbox, $colDate, $colContent, $colDel);
     $tblList.append($row);
-
 }
 
 
