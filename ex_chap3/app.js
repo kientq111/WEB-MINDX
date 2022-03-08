@@ -1,21 +1,11 @@
 const fs = require('fs');
 
-fs.readFile('text1.txt', 'utf8', (err, data) => {
-    if (err) {
-        console.error(err)
-        return
-    }
-    console.log(data)
-});
 
-setTimeout(() => fs.readFile('text2.txt', 'utf8', (err, data) => {
-    if (err) {
-        console.error(err)
-        return
-    }
-    console.log(data)
-}), 2000);
+let txt1 = fs.readFileSync('text1.txt', 'utf8');
 
+console.log(txt1);
 
-let dataInputFromUser = 'Hello Something Else';
-fs.writeFileSync('writeFile.txt', dataInputFromUser);
+let txt2 = fs.readFileSync('text2.txt', 'utf8');
+console.log(txt2);
+
+fs.writeFileSync('writeFile.txt', `${txt1} + ${txt2}`);
