@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<%- include('layouts/header'); -%>
+
+    <body>
+        <%- include('layouts/navbar'); -%>
+            <!-- Page Header -->
+            <header class="masthead" style="background-image: url('/img/contact-bg.jpg')">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10 mx-auto">
+                            <div class="page-heading">
+                                <h1>New Post</h1>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <%blogs.forEach(blog=> {%>
+                <div style="width: 100%; background-color:#d7e0df ;">
+                    <h2>
+                        <%=blog.title%>
+                    </h2>
+                    <p style="display: inline">
+                        <%=blog.body%>
+                    </p>
+                    <br>
+                </div>
+                <br>
+                <%});%>
+                    <%- include('layouts/footer'); -%>
+                        <%- include('layouts/scripts'); -%>
+    </body>
+
+</html>
